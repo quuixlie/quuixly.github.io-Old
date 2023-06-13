@@ -27,6 +27,16 @@ body {
     margin: 0px 60px;
 }
 
+h1 {
+    color: var(--main-font-color);
+    font-size: 48px;
+    font-weight: 500;
+}
+
+p {
+    font-weight: 300;
+}
+
 /*Constant elements*/
 /*=======================================================================================*/
 .btn-unfilled {
@@ -40,6 +50,28 @@ body {
     border-radius: 15px 0px;
     position: relative;
     outline: none;
+}
+
+.btn-filled {
+    width: 210px;
+    height: 60px;
+    font-size: 24px;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    background-color: var(--main-accent-color);
+    border: transparent;
+    position: relative;
+    border-radius: 15px 0px;
+    box-shadow: 0px 0px 30px 11px rgba(134, 200, 255, 0.3);
+    outline: none;
+    transition: ease-out 0.5s;
+}
+
+.btn-filled:hover {
+    transition: ease-out 0.2s;
+    cursor: pointer;
+    background-color: #78C2FF;
+    box-shadow: 0px 0px 30px 11px rgba(134, 200, 255, 0.6);
 }
 
 .number {
@@ -69,9 +101,7 @@ nav ul {
     list-style-type: none;
     display: flex;
     margin: 0 36px 0 0;
-    padding: 0;
     font-weight: 300;
-    
 }
 
 nav li {
@@ -115,3 +145,74 @@ nav li:hover {
     opacity: 1;
     z-index: -1;
 }
+
+/*Landing page*/
+/*=======================================================================================*/
+
+#landing-page {
+    margin: 0 60px;
+    height: calc(100vh - 120px);
+    display: flex;
+    justify-content: space-between;
+}
+
+#landing-page-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+#landing-page-left > span {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.decorative-text {
+    max-width: 24px;
+}
+
+#landing-page-middle {
+    max-width: 660px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#hello {
+    text-align: left;
+    color: var(--second-accent-color);
+    font-weight: 300;
+    font-size: 20px;
+    margin-left: 72px;
+}
+
+#quuixly {
+    font-size: 64px;
+    color: var(--main-accent-color);
+    letter-spacing: 0.105em;
+    margin-bottom: 12px;
+}
+
+#landing-page-middle > p {
+    margin: 12px 0px 24px 0px;
+    max-width: 500px;
+}
+
+
+#landing-page-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+#landing-page-right > span {
+    display: flex;
+    height: 100%;
+    margin-right: 24px;
+}
+
