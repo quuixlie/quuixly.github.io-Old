@@ -270,3 +270,40 @@ nav li:hover {
     margin-right: 24px;
 }
 
+/*About me*/
+/*=======================================================================================*/
+.about-me-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-me-header > div {
+    color: var(--main-font-color);
+    font-size: 36px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+.about-me-header > div:nth-child(1) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-me-header > div:nth-child(1) > div:nth-child(2) {
+    margin: 0 24px;
+}
+
+.horizontal-line {
+    width: 146px;
+    height: 2px;
+    background-color: var(--additional-color);
+}
+
+.about-me-header > div:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
