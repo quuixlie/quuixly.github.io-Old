@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
+
+:root {
+    --main-bg-color: #080D12;
+    --main-accent-color: #4FAEFD;
+    --second-accent-color: #86C8FF;
+    --main-font-color: #BDCAD8;
+    --second-font-color: #8892B0;
+    --additional-color: #A1ABB6;
+  }
+
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+} 
+
+html {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    color: var(--second-font-color);
+}  
+
+body {
+    background-color: var(--main-bg-color);
+    margin: 0px 60px;
+}
+
+/*Constant elements*/
+/*=======================================================================================*/
+.btn-unfilled {
+    width: 210px;
+    height: 60px;
+    font-size: 24px;
+    font-family: 'Roboto', sans-serif;
+    color: var(--main-accent-color);
+    background-color: transparent;
+    border: 6px solid var(--main-accent-color);
+    border-radius: 15px 0px;
+    position: relative;
+    outline: none;
+}
+
+.number {
+    color: var(--main-accent-color);
+    margin-right: 12px;
+}
+
+/*Header*/
+/*=======================================================================================*/
+header {
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+.logo {
+    letter-spacing: 0.21em;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0 36px 0 0;
+    padding: 0;
+    font-weight: 300;
+    
+}
+
+nav li {
+    cursor: pointer;
+    position: relative;
+    margin: 0 12px;
+    
+}
+
+nav li:hover {
+    color: var(--main-font-color);
+}
+
+.header-btn {
+    transition: ease-out 0.4s;
+}
+
+.header-btn:hover {
+    color:var(--main-accent-color);
+    cursor: pointer;
+    color: white;
+}
+
+.header-btn::before {
+    transition: 0.4s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: "";
+    background-color: var(--main-accent-color);
+}
+
+.header-btn:hover:before {
+    transition: 0.4s all ease;
+    box-shadow: 0px 0px 30px 11px rgba(134, 200, 255, 0.7);
+    left: 0;
+    right: 0;
+    opacity: 1;
+    z-index: -1;
+}
