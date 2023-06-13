@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap');
 
 :root {
     --main-bg-color: #080D12;
@@ -30,6 +31,7 @@ body {
 h1 {
     color: var(--main-font-color);
     font-size: 48px;
+    font-family: 'Poppins', sans-serif;
     font-weight: 500;
 }
 
@@ -39,7 +41,7 @@ p {
 
 /*Constant elements*/
 /*=======================================================================================*/
-.btn-unfilled {
+.ghost-btn {
     width: 210px;
     height: 60px;
     font-size: 24px;
@@ -52,7 +54,33 @@ p {
     outline: none;
 }
 
-.btn-filled {
+.ghost-btn:hover {
+    cursor: pointer;
+    color: white;
+}
+
+.ghost-btn::before {
+    transition: 0.2s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: "";
+    background-color: var(--main-accent-color);
+}
+
+.ghost-btn:hover:before {
+    transition: 0.2s all ease;
+    box-shadow: 0px 0px 30px 11px rgba(134, 200, 255, 0.7);
+    left: 0;
+    right: 0;
+    opacity: 1;
+    z-index: -1;
+}
+
+.filled-btn {
     width: 210px;
     height: 60px;
     font-size: 24px;
@@ -64,11 +92,11 @@ p {
     border-radius: 15px 0px;
     box-shadow: 0px 0px 30px 11px rgba(134, 200, 255, 0.3);
     outline: none;
-    transition: ease-out 0.5s;
+    transition: ease-out 0.1s;
 }
 
-.btn-filled:hover {
-    transition: ease-out 0.2s;
+.filled-btn:hover {
+    transition: ease-out 0.1s;
     cursor: pointer;
     background-color: #78C2FF;
     box-shadow: 0px 0px 30px 11px rgba(134, 200, 255, 0.6);
@@ -88,7 +116,7 @@ header {
     align-items: center; 
 }
 
-.logo {
+header > span {
     letter-spacing: 0.21em;
 }
 
@@ -113,37 +141,6 @@ nav li {
 
 nav li:hover {
     color: var(--main-font-color);
-}
-
-.header-btn {
-    transition: ease-out 0.4s;
-}
-
-.header-btn:hover {
-    color:var(--main-accent-color);
-    cursor: pointer;
-    color: white;
-}
-
-.header-btn::before {
-    transition: 0.4s all ease;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    right: 50%;
-    bottom: 0;
-    opacity: 0;
-    content: "";
-    background-color: var(--main-accent-color);
-}
-
-.header-btn:hover:before {
-    transition: 0.4s all ease;
-    box-shadow: 0px 0px 30px 11px rgba(134, 200, 255, 0.7);
-    left: 0;
-    right: 0;
-    opacity: 1;
-    z-index: -1;
 }
 
 /*Landing page*/
@@ -182,15 +179,16 @@ nav li:hover {
     text-align: center;
 }
 
-#hello {
+#landing-page-middle > div > div:nth-child(1) {
     text-align: left;
+    font-family: 'Poppins', sans-serif;
     color: var(--second-accent-color);
     font-weight: 300;
     font-size: 20px;
     margin-left: 72px;
 }
 
-#quuixly {
+#landing-page-middle > div > div:nth-child(2) {
     font-size: 64px;
     color: var(--main-accent-color);
     letter-spacing: 0.105em;
