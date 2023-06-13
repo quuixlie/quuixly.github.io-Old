@@ -1,6 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap');
 
+@keyframes levitate {
+    0% {
+        transform: translate(0, -10px);
+    }
+
+    75% {
+        transform: translate(0, 1px);
+    }
+
+    100% {
+        transform: translate(0, -10px);
+    }
+}
+
 :root {
     --main-bg-color: #080D12;
     --main-accent-color: #4FAEFD;
@@ -25,7 +39,7 @@ html {
 
 body {
     background-color: var(--main-bg-color);
-    margin: 0px 60px;
+    margin: 0px 120px;
 }
 
 h1 {
@@ -145,12 +159,48 @@ nav li:hover {
 
 /*Landing page*/
 /*=======================================================================================*/
-
 #landing-page {
-    margin: 0 60px;
+    margin: 0 65px;
     height: calc(100vh - 120px);
     display: flex;
     justify-content: space-between;
+    position: relative;
+}
+
+#timeline > img:nth-child(1) {
+    position: absolute;
+    left: -22.15px;
+    top: -130px;
+    width: 44.29px;
+    height: 36.52px;
+}
+
+#timeline > img:nth-child(2) {
+    position: absolute;
+    left: -22.15px;
+    top: -70px;
+    width: 44.29px;
+    height: 36.52px;
+}
+
+#timeline {
+    background-color: var(--additional-color);
+    height: 500px;
+    left: -89px;
+    position: absolute;
+    top: 74vh;
+    width: 1px;
+    z-index: 10;
+}
+
+#circle {
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    left: -4px;
+    top: -9px;
+    border: 2px solid #A1ABB6;
+    border-radius: 20px;
 }
 
 #landing-page-left {
@@ -177,6 +227,7 @@ nav li:hover {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    position: relative;
 }
 
 #landing-page-middle > div > div:nth-child(1) {
@@ -200,6 +251,11 @@ nav li:hover {
     max-width: 500px;
 }
 
+#landing-page-middle > img {
+    bottom: 0;
+    position: absolute;
+    animation: levitate 1.2s infinite;
+}
 
 #landing-page-right {
     display: flex;
