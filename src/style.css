@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400&display=swap');
 
 @keyframes levitate {
     0% {
@@ -15,12 +16,27 @@
     }
 }
 
+@keyframes cursor-blink {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+      }
+    100% {
+        opacity: 0;
+    }
+  }  
+
 :root {
     --main-bg-color: #080D12;
+    --second-bg-color: #0D161E;
     --main-accent-color: #4FAEFD;
     --second-accent-color: #86C8FF;
+    --third-accent-color: #229BFF;
     --main-font-color: #BDCAD8;
     --second-font-color: #8892B0;
+    --third-font-color: #565C6F;
     --additional-color: #A1ABB6;
   }
 
@@ -185,7 +201,7 @@ nav li:hover {
 
 #timeline {
     background-color: var(--additional-color);
-    height: 500px;
+    height: 200%;
     left: -89px;
     position: absolute;
     top: 74vh;
@@ -270,3 +286,98 @@ nav li:hover {
     margin-right: 24px;
 }
 
+/*About me*/
+/*=======================================================================================*/
+.about-me-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-me-header > div {
+    color: var(--main-font-color);
+    font-size: 48px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+.about-me-header > div:nth-child(1) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-me-header > div:nth-child(1) > div:nth-child(2) {
+    margin: 0 24px;
+}
+
+.horizontal-line {
+    width: 146px;
+    height: 2px;
+    background-color: var(--additional-color);
+}
+
+.about-me-header > div:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+
+#code-wrap {
+    position: absolute;
+    width: calc(100vw - 120px);
+    font-family: 'Source Code Pro', monospace;
+    color: var(--main-font-color);
+    font-weight: 400;
+}
+
+.line-of-code::before {
+    content: attr(data-line-nr);
+    left: -70px;
+    color: var(--third-font-color);
+    font-weight: 300;
+    position: absolute;
+}
+
+.line-of-code:hover {
+    background-color: var(--second-bg-color);
+}
+
+.python-class {
+    color: var(--main-accent-color);
+}
+
+.python-indentation {
+    color: var(--third-font-color);
+}
+
+.python-method {
+    color: var(--main-accent-color);
+}
+
+.python-method-name {
+    color: var(--second-accent-color);
+}
+
+.python-attribute {
+    color: var(--third-accent-color);
+}
+
+.code-comment {
+    color: var(--third-font-color);
+    padding-right: 120px;
+}
+
+.line-of-code {
+    position: relative;
+}
+.cursor {
+    content: "";
+    width: 5px;
+    height: 24px;
+    position: absolute;
+    bottom: 2px;
+    background: var(--main-accent-color);
+    animation: cursor-blink 0.7s infinite;
+}
