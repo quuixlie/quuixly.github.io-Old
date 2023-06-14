@@ -137,6 +137,42 @@ p {
     margin-right: 12px;
 }
 
+.section-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.section-header > div {
+    color: var(--main-font-color);
+    font-size: 48px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+.section-header > div:nth-child(1) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-header > div:nth-child(1) > div:nth-child(2) {
+    margin: 0 24px;
+}
+
+.horizontal-line {
+    width: 146px;
+    height: 2px;
+    background-color: var(--additional-color);
+}
+
+.section-header > div:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+
 /*Header*/
 /*=======================================================================================*/
 header {
@@ -165,8 +201,7 @@ nav ul {
 nav li {
     cursor: pointer;
     position: relative;
-    margin: 0 12px;
-    
+    margin: 0 12px; 
 }
 
 nav li:hover {
@@ -288,44 +323,7 @@ nav li:hover {
 
 /*About me*/
 /*=======================================================================================*/
-.about-me-header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.about-me-header > div {
-    color: var(--main-font-color);
-    font-size: 48px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-}
-
-.about-me-header > div:nth-child(1) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.about-me-header > div:nth-child(1) > div:nth-child(2) {
-    margin: 0 24px;
-}
-
-.horizontal-line {
-    width: 146px;
-    height: 2px;
-    background-color: var(--additional-color);
-}
-
-.about-me-header > div:nth-child(2) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 24px;
-}
-
 #code-wrap {
-    position: absolute;
     width: calc(100vw - 120px);
     font-family: 'Source Code Pro', monospace;
     color: var(--main-font-color);
@@ -372,6 +370,7 @@ nav li:hover {
 .line-of-code {
     position: relative;
 }
+
 .cursor {
     content: "";
     width: 5px;
