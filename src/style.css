@@ -60,6 +60,7 @@ html {
     font-weight: 500;
     font-size: 24px;
     color: var(--second-font-color);
+    scroll-behavior: smooth;
 }  
 
 body {
@@ -78,6 +79,11 @@ p {
     font-weight: 300;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 /*Constant elements*/
 /*=======================================================================================*/
 .ghost-btn {
@@ -85,6 +91,7 @@ p {
     height: 60px;
     font-size: 24px;
     font-family: 'Roboto', sans-serif;
+    font-weight: 700;
     color: var(--main-accent-color);
     background-color: transparent;
     border: 6px solid var(--main-accent-color);
@@ -136,13 +143,7 @@ p {
     border: transparent;
     position: relative;
     border-radius: 15px 0px;
-    box-shadow:
-    0.8px 0.8px 2.2px rgba(79, 174, 253, 0.037),
-    2px 2px 5.3px rgba(79, 174, 253, 0.053),
-    3.8px 3.8px 10px rgba(79, 174, 253, 0.065),
-    6.7px 6.7px 17.9px rgba(79, 174, 253, 0.077),
-    12.5px 12.5px 33.4px rgba(79, 174, 253, 0.093),
-    30px 30px 80px rgba(79, 174, 253, 0.13);
+    box-shadow: 0px 0px 30px 11px rgba(79, 174, 253, 0.3);
     outline: none;
     transition: ease-out 0.1s;
 }
@@ -150,7 +151,7 @@ p {
 .filled-btn:hover {
     transition: ease-out 0.1s;
     cursor: pointer;
-    background-color: #78C2FF;
+    background-color: var(--second-accent-color);
     box-shadow:
     0.8px 0.8px 2.2px rgba(79, 174, 253, 0.084),
     2px 2px 5.3px rgba(79, 174, 253, 0.121),
@@ -195,7 +196,7 @@ p {
 .horizontal-line {
     width: 146px;
     height: 2px;
-    background-color: var(--additional-color);
+    background-color: #565C6F;
 }
 
 .section-header > div:nth-child(2) {
@@ -250,7 +251,7 @@ nav li:hover {
     position: relative;
 }
 
-#timeline > img:nth-child(1) {
+#timeline > a:nth-child(1) {
     position: absolute;
     left: -22.15px;
     top: -130px;
@@ -258,7 +259,7 @@ nav li:hover {
     height: 36.52px;
 }
 
-#timeline > img:nth-child(2) {
+#timeline > a:nth-child(2) {
     position: absolute;
     left: -22.15px;
     top: -70px;
@@ -375,7 +376,8 @@ nav li:hover {
 }
 
 .line-of-code:hover {
-    background-color: var(--second-bg-color);
+    background-color: var(--second-bg-color) !important; /*override scroll-animation css*/
+    transition: none !important; /*override scroll-animation css*/
 }
 
 .python-class {
@@ -421,7 +423,8 @@ nav li:hover {
 /*=======================================================================================*/
 #projects-wrap {
     margin: 0 60px;
-    display: flex; 
+    display: flex;
+    gap: 150px;
     justify-content: center;
     align-items: center;
 }
@@ -491,12 +494,13 @@ nav li:hover {
     gap: 24px;
     justify-content: center;
 }
+
 /*Footer*/
 /*=======================================================================================*/
 footer {
     height: 400px;
     display: flex;
-    color: var(--additional-color);
+    color: #565C6F;
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
@@ -509,4 +513,16 @@ footer {
 footer img {
     width: 44.29px;
     height: 38.71px;
+}
+
+.reveal {
+    position: relative;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 0.5s all ease;
+}
+  
+.reveal.active {
+    transform: translateY(0);
+    opacity: 1;
 }

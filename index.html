@@ -11,17 +11,17 @@
         <span>quuixly</span>
         <nav>
         <ul>
-            <li><span class="number">00.</span>About me</li>
-            <li><span class="number">01.</span>Projects</li>
+            <li><a href="#about-me"><span class="number">00.</span>About me</a></li>
+            <li><a href="#projects"><span class="number">01.</span>Projects</a></li>
         </ul>
-        <button class="ghost-btn">Contact</button>
+        <button class="ghost-btn" id="c19askdbhrmjq9c7ej">Contact</button>
         </nav>
     </header>
     <main>
         <section id="landing-page">
             <div id="timeline">
-                <img src="assets/images/twitter-icon.png" alt="twitter icon">
-                <img src="assets/images/github-icon.png" alt="github icon">
+                <a href="https://twitter.com/quuixly"><img src="assets/images/twitter-icon.png"></a>
+                <a href="https://github.com/quuixly"><img src="assets/images/github-icon.png"></a>
                 <div id="circle"></div>
             </div>
             <div id="landing-page-left">
@@ -31,11 +31,11 @@
             <div id="landing-page-middle">
                     <div>
                         <div>Hello, my name is,</div>
-                        <div>quuixly!</div>
+                        <div class="decryption-effect">quuixly!</div>
                         <h1>I am a software enginner.</h1>
                     </div>
                     <p>I love inventing and creating new inventions that require knowledge in the field of electronics and computer science.</p>
-                    <button class="filled-btn">START</button>
+                    <button class="filled-btn" onclick="window.location.href='#about-me';">START</button>
                     <img src="assets/images/arrow-down.png">
             </div>
             <div id="landing-page-right">
@@ -46,71 +46,71 @@
 
         <section id="about-me">
             <div class="section-header">
-                <div>
+                <div class="reveal">
                     <div class="horizontal-line"></div>
                     <div><span class="number">00.</span>About me</div>
                     <div class="horizontal-line"></div>
                 </div>
-                <div>Learn something about me!</div>
+                <div class="reveal">Learn something about me!</div>
             </div>
             <div id="code-wrap">
                 <br><br>
-                <div class="line-of-code" data-line-nr="01">
+                <div class="line-of-code reveal" data-line-nr="01">
                     <span class="python-class">class</span>
                     SoftwareEnginner:
                 </div>
-                <div class="line-of-code" data-line-nr="02">
+                <div class="line-of-code reveal" data-line-nr="02">
                     <span class="python-indentation">····</span><span class="python-method">def</span> 
                     <span class="python-method-name">__init__(<span class="python-attribute">self</span>):</span>
                 </div>
-                <div class="line-of-code" data-line-nr="03">
+                <div class="line-of-code reveal" data-line-nr="03">
                     <span class="python-indentation">········</span><span class="python-attribute">self</span>.name 
                     <span class="python-attribute">=</span> ""
                 </div>
-                <div class="line-of-code" data-line-nr="04">
+                <div class="line-of-code reveal" data-line-nr="04">
                     <span class="python-indentation">········</span><span class="python-attribute">self</span>.contact 
                     <span class="python-attribute">=</span> ""
                 </div>
-                <div class="line-of-code" data-line-nr="05">
+                <div class="line-of-code reveal" data-line-nr="05">
                     <span class="python-indentation">········</span><span class="python-attribute">self</span>.languages 
                     <span class="python-attribute">=</span> {}
                 </div>
-                <div class="line-of-code" data-line-nr="06">
+                <div class="line-of-code reveal" data-line-nr="06">
                     <span class="python-indentation">········</span><span class="python-attribute">self</span>.skills 
                     <span class="python-attribute">=</span> []
                 </div>
-                <div class="line-of-code" data-line-nr="07">
+                <div class="line-of-code reveal" data-line-nr="07">
                     <span class="python-indentation">········</span><span class="python-attribute">self</span>.experience 
                     <span class="python-attribute">=</span> {}
                 </div>
 
-                <div class="line-of-code" data-line-nr="08">&nbsp</div>
+                <div class="line-of-code reveal" data-line-nr="08">&nbsp</div>
 
-                <div class="line-of-code" data-line-nr="09">
+                <div class="line-of-code reveal" data-line-nr="09">
                     <span class="python-attribute">quuixly</span>
                     <span class="python-attribute">=</span>
                     SoftwareEnginner()
                 </div>
 
-                <div class="line-of-code" data-line-nr="10">&nbsp</div>
+                <div class="line-of-code reveal" data-line-nr="10">&nbsp</div>
 
-                <div class="line-of-code" data-line-nr="11"><span class="python-attribute">quuixly</span>.name
+                <div class="line-of-code reveal" data-line-nr="11"><span class="python-attribute">quuixly</span>.name
                     <span class="python-attribute">=</span>
                     "<span class="python-class">Jimmy</span>"
                 </div>
-                <div class="line-of-code" data-line-nr="12">
+                <div class="line-of-code reveal" data-line-nr="12">
                     <span class="python-attribute">quuixly</span>.contact
                     <span class="python-attribute">=</span>
                     "<span class="python-class">twitter.com/quuixly</span>"
                 </div>
-                <div class="line-of-code" data-line-nr="13">
+                <div class="line-of-code reveal" data-line-nr="13">
                     <span class="python-attribute">quuixly</span>.languages
                     <span class="python-attribute">=</span>
                     {"<span class="python-class">Polish</span>": "<span class="python-attribute">Native</span>",
                     "<span class="python-class">English</span>": "<span class="python-attribute">B2</span>",
                     "<span class="python-class">Russian</span>": "<span class="python-attribute">A1</span>"}
                 </div>
-                <div class="line-of-code" data-line-nr="14">
+                <div class="line-of-code reveal" data-line-nr="14">
                     <span class="python-attribute">quuixly</span>.skills
                     <span class="python-attribute">=</span>
                     ["<span class="python-class">HTML</span>", "<span class="python-class">CSS</span>",
@@ -119,15 +119,15 @@
                     "<span class="python-class">.NET</span>", "<span class="python-class">SQL</span>",
                     <span class="cursor"></span>&nbsp]
                 </div>
-                <div class="line-of-code" data-line-nr="15">
+                <div class="line-of-code reveal" data-line-nr="15">
                     <span class="python-attribute">quuixly</span>.experience
                     <span class="python-attribute">=</span>
                     {"<span class="python-class"></span>": "<span class="python-attribute">2015-now</span>"}
                 </div>
 
-                <div class="line-of-code" data-line-nr="16">&nbsp</div>
+                <div class="line-of-code reveal" data-line-nr="16">&nbsp</div>
 
-                <div class="line-of-code" data-line-nr="17"><span class="code-comment">""" My history...</span><br>
+                <div class="line-of-code reveal" data-line-nr="17"><span class="code-comment">""" My history...</span><br>
                     <span class="code-comment">
                         My history with programming began when I was 15 years old. 
                         My first program was a simple password generator written in C++.
@@ -148,28 +148,28 @@
                     <br><span class="code-comment">"""</span>
                 </div>
 
-                <div class="line-of-code" data-line-nr="18">&nbsp</div>
+                <div class="line-of-code reveal" data-line-nr="18">&nbsp</div>
 
-                <div class="line-of-code" data-line-nr="19"><span class="code-comment"># MjAyMCAtIEd1c3RhdnVzIG9iaWl0LCBuYXR1cyBlc3QgQ29ucmFkdXM=</span></div>
+                <div class="line-of-code reveal" data-line-nr="19"><span class="code-comment"># MjAyMCAtIEd1c3RhdnVzIG9iaWl0LCBuYXR1cyBlc3QgQ29ucmFkdXM=</span></div>
                 <br> <br>
             </div>
         </section>
         
         <section id="projects">
             <div class="section-header">
-                <div>
+                <div class="reveal">
                     <div class="horizontal-line"></div>
                     <div><span class="number">01.</span>Projects</div>
                     <div class="horizontal-line"></div>
                 </div>
-                <div>Look what I did!</div>
+                <div class="reveal">Look what I did!</div>
             </div>
             <br> <br>
-            <div id="projects-wrap">
+            <div id="projects-wrap" class="reveal">
                 <div class="container" data-tilt data-tilt-glare data-tilt-max-glare="0.8" data-tilt data-tilt-scale="1.1">
                     <div>
-                        <h1>Bindly</h1>
-                        <p>Keyboard mngr</p>
+                        <h1 class="reveal">Bindly</h1>
+                        <p class="reveal">Keyboard mngr</p>
                     </div>
                     <div>
                         <img src="assets/images/github-icon-dark.png">
@@ -178,20 +178,23 @@
                 </div>
             </div>
             <br> <br>
-            <div id="contact">
-                <button class="ghost-btn">Github</button>
-                <button class="ghost-btn">Contact</button>
+            <div id="contact" class="reveal">
+                <button class="ghost-btn" onclick="window.location.href='https://github.com/quuixly';">Github</button>
+                <button class="ghost-btn" id="c8q2o3dua92khdfi">Contact</button>
             </div>
         </section>
     </main> 
     <footer>
         <span id="copyright">© 2023 quuixly, All rights reserved.</span>
         <div>
-            <img src="assets/images/twitter-icon.png">
-            <img src="assets/images/github-icon.png">
+            <a href="https://twitter.com/quuixly"><img src="assets/images/twitter-icon.png"></a>
+            <a href="https://github.com/quuixly"><img src="assets/images/github-icon.png"></a>
         </div>
     </footer>
     <script type="text/javascript" src="src/vanilla-tilt.js"></script>
     <script type="text/javascript" src="src/matrix-effect.js"></script>
+    <script type="text/javascript" src="src/xxxx.js"></script>
+    <script type="text/javascript" src="src/scroll-animation.js"></script>
+    <script type="text/javascript" src="src/decryption-effect.js"></script>
 </body>
 </html>
